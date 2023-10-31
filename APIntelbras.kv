@@ -1,0 +1,62 @@
+<myGrid>:
+    orientation: 'vertical'
+
+    Image:
+        id: my_image
+        source: "Logo.png"
+    
+    TextInput:
+        id: input_ip
+        valign: 'middle'
+        size_hint: (0.7, None)
+        height: self.minimum_height
+        hint_text: "Digite o IP do dispositivo"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+    Label:
+        size_hint_y: None
+        height: 20
+
+    TextInput:
+        id: input_senha
+        valign: 'middle'
+        size_hint: (0.7, None)
+        height: self.minimum_height
+        hint_text: "Digite a senha do dispositivo"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+
+    Label:
+        id: response_msg
+        text: ""
+        text_size: self.width, None
+        halign: 'center'
+        valign: 'middle'
+
+    Label:
+        size_hint_y: None
+        height: 75
+
+    Button:
+        id: reset_button
+        text: 'Resetar'
+        font_size: 20
+        size_hint: 0.25, 0.25
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        border_radius: 10, 10, 10, 10
+        background_color: 1, 1, 1, 0.5
+        disabled: False
+        on_press:
+            root.executar()
+            
+        on_release:
+            root.desabilitar_botao()
+        on_disabled:
+            opacity: 0.3
+        
+    Label:
+        size_hint_y: None
+        height: 75
+
+<Inicio>:
+    myGrid:
