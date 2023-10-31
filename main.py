@@ -27,11 +27,11 @@ class myGrid(BoxLayout):
     
     def desabilitar_botao(self):
         button = self.ids.reset_button
-        button.disabled = True  # Desabilita o botão
-        Clock.schedule_once(self.reabilitar_botao, 5)  # Agenda a reabilitação do botão após 5 segundos
+        button.disabled = True  
+        Clock.schedule_once(self.reabilitar_botao, 5)  
 
     def reabilitar_botao(self, _):
-        button = self.ids.reset_button  # Acesse o botão através da estrutura de widgets
+        button = self.ids.reset_button 
         button.disabled = False 
 
 
