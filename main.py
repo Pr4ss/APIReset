@@ -9,7 +9,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import Screen
 from kivy.clock import Clock
 
-class APIntelbras(App):
+class APIReset(App):
     def build(self):
         return myGrid()
 
@@ -124,4 +124,4 @@ class myGrid(BoxLayout):
 class Inicio(Screen):
     pass
     
-APIntelbras().run()
+APIReset().run()
