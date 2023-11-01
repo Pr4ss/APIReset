@@ -125,3 +125,5 @@ class Inicio(Screen):
     pass
     
 APIReset().run()
+
+#teste
